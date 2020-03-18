@@ -27,7 +27,7 @@ class bgagent:
         elif(self.state == "computing"):
             for i in list(self.possibles):
                 tembc = self.getbullandcows(i)
-                if(tembc[0] != b and tembc[1]!=c):
+                if(tembc[0] != b or tembc[1]!=c):
                     self.possibles.remove(i)
             print(len(self.possibles))     
             self.prev = self.actual   
