@@ -18,7 +18,6 @@ class bgagent:
             if(len(set(list(ns))) == 4):
                 self.possibles.add(ns)
         self.actual = random.choice(list(self.possibles))
-        print("posibles " + str(len(self.possibles)))
         self.prev = self.actual
     def calculate(self,b,c):
         if(b==-1 and c==-1):
