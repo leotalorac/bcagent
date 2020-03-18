@@ -11,11 +11,14 @@ class bgagent:
     prev = ""
     state = "started"
     def __init__(self):
-        for i in range(1000,10000):
+        for i in range(0,10000):
             ns = str(i)
+            if(len(ns) ==3):
+                ns = "0"+ns
             if(len(set(list(ns))) == 4):
                 self.possibles.add(ns)
         self.actual = random.choice(list(self.possibles))
+        print("posibles " + str(len(self.possibles)))
         self.prev = self.actual
     def calculate(self,b,c):
         if(b==-1 and c==-1):
